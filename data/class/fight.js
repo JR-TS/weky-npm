@@ -1,5 +1,7 @@
 class fight {
 
+  /* planning to add combo's that have a 50% chance of failing and taking damage from person that attacked */
+  
   constructor(options) {
     if(!options.acceptMessage) throw new Error('Weky Error: Missing argument acceptMessage')
     if(typeof options.acceptMessage !== 'string') throw new Error('Weky Error: Accept message must be a string')
@@ -104,6 +106,12 @@ class fight {
         .setLabel(this.cancelButtonText)
         .setID(this.cancel)
         .setStyle(this.cancelButtonColor)
+        /*
+        let btn4 = new MessageButton()
+        .setLabel(this.ComboButtonText)
+        .setID(this.Combo)
+        .setStyle(this.ComboButtonColor)
+        */
         let row = new MessageActionRow()
         .addComponent(btn1)
         .addComponent(btn2)
