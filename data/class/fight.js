@@ -73,8 +73,9 @@ class fight {
       const reaction = response.first();
       try {
     if (reaction.emoji.name === '❌') { return question.edit("Cancelled this fight."); } else {
-        const challengerHealth = 100;
-        const oppenentHealth = 100;
+      // Changed to 300 to make fights longer
+        const challengerHealth = 300;
+        const oppenentHealth = 300;
     
         const challengerLastAttack = 'heal';
         const oppenentLastAttack = 'heal';
